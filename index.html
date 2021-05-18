@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Title</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mt-3">
+                <button class="btn btn-info" onclick="ClickShow()" id='ShowButton'>Show</button>
+                <button class="btn btn-info" onclick="ClickHide()" id='HideButton'>Hide</button>
+            </div>
+            <div class="col-12 text-center mt-3">
+                <p class="textsize" id="unti">ClickHideButton</p>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.4/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.min.js"></script>
+    <script src="jquery-3.6.0.js"></script>
+    <script>
+        $(function() {
+            $("#unti").hide();
+            $('#HideButton').hide();
+        });
+
+        // Click ShowButton
+        function ClickShow() {
+            $('#ShowButton').hide();
+            $('#HideButton').show();
+            $("#unti").fadeIn();
+        }
+
+        // Click HideButton
+        function ClickHide() {
+            $('#ShowButton').show();
+            $('#HideButton').hide();
+            $("#unti").fadeOut();
+        }
+    </script>
+</body>
+
+</html>
